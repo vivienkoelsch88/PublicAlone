@@ -1,0 +1,9 @@
+combattre {}	
+	
+	combattre -> joueur
+	combattre -> monstre
+	combattre -> atbjoueur
+	combattre -> atbmonstre []
+	combattre -> lancerlecombat ()
+	combattre -> tourdejeu ()
+	combattre -> findecombat ()

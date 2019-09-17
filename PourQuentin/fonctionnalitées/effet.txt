@@ -1,0 +1,11 @@
+effet {}
+se soigner {}
+recuperation d'initiative {}
+senrouler autour du joueur {}
+effet de mort {}
+	
+	effet -> effet ()
+	se soigner -> effet ()
+	recuperation d'initiative -> effet ()
+	senrouler autour du joueur -> effet ()
+	

@@ -1,0 +1,35 @@
+premiere fonctionnalité : choisir ce qu'il se passe lors de la journée
+	-choisir 
+		d'explorer
+			lieu {}
+				joueur -> lieu actuel
+				joueur -> lieu connu
+				joueur -> explorer
+				lieu -> etre explorer ()
+							
+
+
+
+		fatigue 
+			
+				joueur -> moral
+				joueur -> vie
+				joueur -> se reposer ()
+
+
+		cueillir
+			lieu{}
+				lieu -> etre cueilli
+				joueur -> cueillir
+				lieu -> nourriturecueillir
+				joueur -> nourriture
+				
+
+		chasser
+			lieu {}
+				lieu -> etre chasser () 
+				joueur -> chasser ()
+				lieu -> nourriturechasse
+				joueur -> nourriture
+		
+

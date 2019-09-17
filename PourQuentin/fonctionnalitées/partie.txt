@@ -1,0 +1,8 @@
+partie {}
+
+	partie -> joueur
+	partie -> actionjour []
+	partie -> actionnuit []
+	partie -> compteur
+	partie -> nuits {}
+	partie -> effetdebutdetour ()

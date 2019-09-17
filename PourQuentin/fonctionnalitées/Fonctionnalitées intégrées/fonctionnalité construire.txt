@@ -1,0 +1,19 @@
+Construire:
+
+
+camp {}
+batiment {}
+ressource {}
+		
+		batiment -> ressourcesnecessaires
+		camp -> listedebatiments
+		camp -> listederessources
+		camp -> listedebatimentsconnus
+		ressource -> nombrederessources
+		ressource -> type
+		joueur -> camp
+		camp -> construire ()
+		batiment -> detruire ()
+		batiment -> effetconstruction ()
+
+

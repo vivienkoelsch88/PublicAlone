@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}Jeu{% endblock %}
+{% block body %}
+
+    {{ form_start(form) }}
+    <button type="submit" class="btn btn-outline-dark">Créer partie</button>
+    {{ form_end(form) }}
+
+
+    {{ form_start(formSelectPartie) }}
+
+    {% for partie in parties %}
+        <button type="submit" value="{{ partie.getId() }}" id="partie" name="partie" class="btn btn-success selectPartie">Partie n°{{ partie.getId() }}</button>
+        <br>
+    {% endfor %}
+
+    {#<button type="submit" class="btn btn-success">Lancer partie</button>#}
+
+    {{ form_end(formSelectPartie) }}
+
+
+
+
+
+{% endblock %}

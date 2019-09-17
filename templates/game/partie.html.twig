@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block title %}Partie{% endblock %}
+{% block body %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('debutJournee', {"id" : partieId}) }}">Commencement de la journée</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="js-statDuJoueur" href="{{ path('statJoueur', {"id" : partieId}) }}">Stats du joueur</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="js-afficheCamp" href="{{ path('statJoueur', {"id" : partieId}) }}">Afficher Camp</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Partie en cour n° {{ partieId }}</h1>
+
+    <div id="StatJoueur" class="hide"></div>
+    <div id="afficherCamp" class="hide">
+        <div class="hide" id="feu"></div>
+        <a href="{{ path('afficheBatiment', {"id" : partieId, "idBatiment" : 1}) }}" class="afficheBatiment">Feu</a>
+    </div>
+    <div id="playDay" class="playDayClass">
+        Ici le début de la journée, attente des classes "enfants"
+    </div>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{{ asset('build/JavaScript/game.js') }}">
+    </script>
+{% endblock %}

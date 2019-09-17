@@ -1,0 +1,17 @@
+joueur {}
+
+	joueur -> lieux actuel
+	joueur -> lieux connu []
+	joueur -> moral
+	joueur -> vie
+	joueur -> initiative
+	joueur -> nourriture
+	joueur -> nbrd'actionjour
+	joueur -> nbrd'actionnuit
+	joueur -> camp 
+	joueur -> listed'actiondecombat []
+	joueur -> objet []
+	joueur -> cueillir ()
+	joueur -> se reposer ()
+	joueur -> chasser ()
+	joueur -> prendredesdegats ()

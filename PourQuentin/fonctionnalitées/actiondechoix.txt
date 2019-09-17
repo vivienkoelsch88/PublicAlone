@@ -1,0 +1,12 @@
+actionchoix {}
+chasser {}
+construire {}
+cueillir {}
+	
+	
+	actionchoix -> nom
+	actionchoix -> partie {}
+	actionchoix -> actionchoix ()
+	chasser -> action ()
+	construire -> action ()
+	cueillir -> action ()

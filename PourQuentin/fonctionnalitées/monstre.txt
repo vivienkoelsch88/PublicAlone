@@ -1,0 +1,14 @@
+rampant {}
+monstre {}
+	monstre -> nom
+	monstre -> effetfindetour []
+	monstre -> listedactiondecombat
+	monstre -> viemax
+	monstre -> vieactuel
+	monstre -> initiative
+	monstre -> listeeffetfindecombat
+	monstre -> listeeffetdemort
+	monstre -> actionmonstre ()
+	rampant -> butin []
+	rampant -> actionmonstre ()
+	rampant -> prendredesdegats ()

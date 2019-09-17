@@ -1,0 +1,128 @@
+					Les classes
+
+Quoi dans quoi avec quoi ? toujours se poser cette question lors de la creation 
+
+Un exemple de synthaxe que j'utilise, attention l'ordre est important
+	monstres.ours n'est pas la même chose que ours.monstres !!!
+
+
+1 - Les classes "parents" :
+	exemple : objets, monstres, batiments, lieux, évenements, ressources, personnages, véhicules, camp, etc etc
+
+2 Les classes "enfants" :
+ATTENTION!!! UNE CLASSE PARENT PEUT NE PAS AVOIR D'ENFANT!!
+Il est pratique de préciser son parent avec cette synthaxe :
+	exemple :
+		objets.arme
+		objets.outil
+		objets.conssomable
+		monstres.loup
+		batiments.tente
+		lieux.terrainDeChasse
+		evenements.attaqueDeLoup
+		ressources.bois
+		etc etc...
+
+3 - Les attributs :
+	Les données des classes, sans avoir besoin de le préciser, les enfant possèdes les attributs de leur parent.
+	Il est important de préciser le typre de données de l'attribut.
+
+	Les différents types de données :
+		int   =>  Un nombre
+		string =>   un ou des charactères, des lettres mais aussi des nombre, exemple : "maison2"
+		[int]   =>   une liste de plusieurs nombres   exemple : [1, 5, 4, 8]
+		[string]  =>  tu as compris, exemple : ["bonjour", "salut", "4", "toto"]
+		[][]   =>    plusieurs liste, exemple : [["premiere", "liste"], ["autre", "liste"]]
+		classe{}  =>  Une autre classe, exemple : monstres->loup
+
+
+	Chaques attributs possèdent un nom, pour pouvoir les utiliser je doit dire à l'ordi le nom de 
+	l'attribut que je veux utiliser, ça donne donc :
+		 ____________________________________
+	        |           Joueur.guerrier          |      Joueur = parent   et   guerrier = enfant
+		|                                    |
+		| arme : objets.arme{}               |
+		| vie : int                          |
+		| nom : string                       |
+		| vetements : [][]objets.vetement{}  |
+		| etc etc ..                         |
+		|                                    |
+
+
+4 - Les fonctions :
+	Les actions potentielles de la classe, sans avoir besoin de le préciser, 
+	les enfant possèdes les fonctions de leur parent.
+	De même que les attributs, les fonction ont un nom pour être utiliser.
+
+	Elles modifient un ou des attributs, de la classe ou d'une autre, 
+	Elles peuvent aussi appeler elles-même d'autres fonctions.
+	exemple :
+
+		|                                    |
+		| dormir : (){                       |     La fonction s'appelle dormir
+		|	Joueur.guerrier->vie + 5     |	   La vie du joueur augmente de 5
+		|	Jeu->heure + 2               |     2h passent
+		|	}                            |
+		|				     |
+		| prendreDegats: (attaque int){      |	   La fonction demande qu'on lui donne un nombre qu'elle appellera "attaque" 
+		|	Joueur.guerrier->vie- attaque|	   La vie du joueur baisse de "attaque"
+		|	si Joueur.guerrier->vie < 0  |	   Si le joueur est mort, 
+		|            Jeu->finDuJeu()	     |	   Le jeu se finis
+		|	}                            |
+		|                                    |
+		| tomber: (){                        |
+		|   Joueur.guerrier->prendreDegats(2)|	   La fonction déclenche la fonction prendreDegats du joueur
+		|	}                            |		et lui dit que "attaque" égal 2, le joueur perdra donc 2PV
+		|				     |
+		| attaquer: (cible monstres{}){      |     La fonction demande qu'on lui donne un monstre qu'elle appellera "cible" 
+		|     monstres->prendreDegats(       |	   La fonction déclenche la fonction prendreDegats du monstre
+		|        Joueur.guerrier->arme->dégat|	   t lui dit que "attaque" égal aux dégats, de l'arme du joueur
+		|               )                    |
+		| 	}                            |
+		|____________________________________|
+
+ATTENTION !!!!!! Ne lis la suite que si ça va!!!
+
+
+5 - Les fonctions abstract
+	Certaines fonctions sont possédées par tout les enfants d'une même classe parent.
+	Si les effets sont les mêmes, la fonction est donc mal placée et doit aller dans le parent, exemple :
+		Plus haut, la fonction prendreDegats() est la même pour toutes les classes.
+		Elles doit donc être placée dans Joueur, et pas dans Joueur.guerrier.
+
+	Si les effets sont différents, elles sont bien entendu placées dans l'enfant.
+	Mais si TOUT les enfants possèdent une fonction avec le même nom, avec des effets différents,
+		elle apparait aussi dans le parent en ABSTRACT.
+	Exemple : 
+		 ____________________________________
+		|           Monstres                 |     
+		|                                    |
+		| attaquerJoueur: () ABSTRACT        |
+		|                                    |	   
+		|	                             |
+
+		 ____________________________________
+		|           Monstres.loup            |     
+		|                                    |
+		| attaquerJoueur: (){                |
+		|   Joueur.guerrier->prendreDegats(2)|	   La fonction déclenche la fonction prendreDegats du joueur
+		|	}                            |		et lui dit que "attaque" égal 2, le joueur perdra donc 2PV
+		|				     |
+
+		 ____________________________________
+		|           Monstres.ours            |     
+		|                                    |
+		| attaquerJoueur: (){                |
+		|   Joueur.guerrier->prendreDegats(4)|	   La fonction déclenche la fonction prendreDegats du joueur
+		|	}                            |		et lui dit que "attaque" égal 4, le joueur perdra donc 4PV
+		|				     |
+
+		 ____________________________________
+		|           Monstres.dragon          |     
+		|                                    |
+		| attaquerJoueur: (){                |
+		|   Joueur.guerrier->prendreDegats(4)|	   
+		|   Joueur.guerrier->vêtement = 0    |     Toujours la même fonction, mais dans le cas du dragon, le joueur
+		|	}                            |	   perd ses vetements	
+		|				     |
+

@@ -1,0 +1,15 @@
+ActionChoix{}
+Nuit{}
+
+partie -> ActionsChoix
+partie -> ActionsJourDisponibles
+partie -> ActionsNuitDisponibles
+partie -> nuitSuivante
+joueur -> nbrActionJour
+joueur -> nbrActionNuit
+
+partie -> effetDebutDeTour()
+partie -> choixJournee()
+partie -> choixNuit()
+ActionChoix -> Action()
+Nuit -> passerLaNuit()

@@ -1,0 +1,20 @@
+Pour créer la première fois le dossier , dans un gitbash ouvert sur ton bureau:
+    git clone https://github.com/vivienkoelsch88/AloneInTheIsland.git
+
+
+     MEGA IMPORTANT!!
+     TOUTES LES COMMANDES GIT A PARTIR D'ICI, SE FONT DANS UN GITBASH OUVERT DANS LE DOSSIER!!!!!!!!!!!
+
+
+Quand tu commence à bosser sur le dossier, mettre à jour se que j'ai fais de mon côté :
+    git pull
+
+Pour envoyer tes modifications sur github pour que je puisse les récupérer, tu push :
+    git add .                                     (N'oublie pas le . )
+    git commit -m"Ici tu écris un message"        (pense à mettre le -m avant le message)
+    git push
+
+
+!!! Quand tu push ou pull, normalement tu n'auras jamais de problème, mais si je suis en train de bidouiller le code en même temps que toi,
+il est possible que ça pose problème...
+Touche à rien et appel moi si ça arrive ^^

@@ -1,0 +1,83 @@
+html body {
+    height: 100%;
+    margin :0;
+    padding: 0;
+    position:absolute;
+}
+
+body {
+    width: 100%;
+   background: rgb(7, 55, 72);
+}
+
+.container {
+    background-color: #dfdfdf;
+    background-image: url("../images/plage.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    min-height: 100%;
+    width: 70%;
+    margin: auto;
+    padding: auto;
+    align-content: center;
+
+}
+
+h1 {
+    font-size: 45px;
+    text-shadow: -1px -1px #0c0, 1px 1px #060, -3px 0 4px #000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #090;
+    padding: 16px;
+    font-weight: lighter;
+    -webkit-box-shadow:0px 0px 50px 30px #00f9ff ;
+    -moz-box-shadow:0px 0px 50px 30px #00f9ff ;
+    box-shadow:0px 0px 50px 30px #00f9ff ;
+    text-align: center;
+    display: block;
+    margin: 16px;
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    background:none repeat 0 0 rgba(0, 0, 0, 0.70);
+}
+
+h2 {
+    border: 7px groove #274A82;
+    border-radius: 40px;
+    text-align: center;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 23px;
+    letter-spacing: -1.8px;
+    word-spacing: 2px;
+    color: #C82829;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+
+.userNameConnecting {
+    text-align: right;
+    color: #dfdfdf;
+}
+.userNameConnecting:hover {
+    color: #dfdfdf;
+    text-decoration: none;
+}
+
+.btn-outline-dark {
+    background-color: #AAAAAA;
+    float: right;
+    margin-top: 5px;
+}
+
+.selectPartie {
+    width: 50%;
+    margin-top: 10px;
+    text-align: left;
+}

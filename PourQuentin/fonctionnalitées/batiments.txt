@@ -1,0 +1,15 @@
+feu {}
+camp {}
+batiments {}
+	
+	batiments -> nom
+	batiment -> ressourcenecessaire
+	batiment -> partie {}
+	batiments -> effetconstruction ()
+	camp -> listedesbatiments
+	camp -> listedesressources
+	camp -> listedesbatimentsconnus
+	camp -> objet []
+	camp -> partie {}
+	camp -> construire ()
+	feu -> effetconstruction ()

@@ -1,0 +1,54 @@
+combattre {}
+	
+monstre {} 
+
+actiondecombat {}
+
+objet.arme {}
+
+effet {}
+
+	joueur -> listeeffetdebutdecombat
+	monstre -> listeeffetdebutdecombat
+	joueur -> listedebutdetour 
+	monstre -> listedebutdetour
+	joueur -> listefindetour
+	monstre -> listefindetour
+	joueur -> listefindecombat
+	monstre -> listefindecombat
+	partie -> combattre
+	combattre -> jaugedecombat []
+	combattre -> joueur
+	combattre -> monstre 
+	joueur -> arme
+	monstre -> vie
+	monstre -> attaque
+	joueur -> attaque
+	monstre -> defense
+	joueur -> defense
+	joueur -> initiative
+	monstre -> initiative
+	monstre -> choixactiondecombat ()
+	joueur -> choixactiondecombat ()
+	combattre -> lancerlecombat () 
+	monstre -> effetdebutdecombat ()
+	joueur -> effetdebutdecombat ()
+	lieu -> effetdebutdecombat ()
+	combattre -> tourdejeu () 
+	joueur -> effetdecombat
+	monstre -> effetdecombat
+	actiondecombat -> actiondecombat ()
+	lieu -> effetdebutdutour ()
+	joueur -> effetdebutdutour ()
+	monstre -> effetdebutdutour ()
+	lieu -> effetfindetour ()
+	joueur -> effetfindetour ()
+	monstre -> effetfindetour ()
+	combattre -> effetfindecombat ()
+	joueur -> effetfindecombat ()
+	monstre -> effetfindecombat ()
+	
+	
+
+
+	

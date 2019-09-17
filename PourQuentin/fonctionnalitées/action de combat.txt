@@ -1,0 +1,9 @@
+actiondecombat {}
+attaquer {}
+derober {}
+etrangler {}
+
+	action de combat -> effectuerlactiondecombat ()
+	attaquer -> effectuerlactiondecombat ()
+	derober -> effectuerlactiondecombat ()
+	etrangler -> effectuerlactiondecombat ()

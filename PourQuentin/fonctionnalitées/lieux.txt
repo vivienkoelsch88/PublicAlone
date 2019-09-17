@@ -1,0 +1,35 @@
+lieux {}
+plage {}
+marecage {}
+foret {}
+camp {}
+temple {}
+cimetierre {}
+grotte {}
+volcan {}
+plaine {}
+	
+	lieux -> nourriturecueillir
+	lieux -> nourriturechasse
+	lieux -> nom
+	lieux -> etrechasse ()
+	lieux -> etrecueilli ()
+	lieux -> etre explorer ()
+	plage -> etre cueilli ()
+	plage -> etre chasse ()
+	marecage -> etre cueilli ()
+	marecage -> etre chasse ()
+	foret -> etre cueilli ()
+	foret -> etre chasse ()
+	temple -> etre cueilli ()
+	temple -> etre chasse ()
+	cimetierre -> etre cueilli ()
+	cimetierre -> etre chasse ()
+	plaine -> etre cueilli ()
+	plaine -> etre chasse ()
+	grotte -> etre cueilli ()
+	grotte -> etre chasse ()
+	camp -> etre cueilli ()
+	camp -> etre chasse ()
+	volcan -> etre cueilli ()
+	volcan -> etre chasse ()

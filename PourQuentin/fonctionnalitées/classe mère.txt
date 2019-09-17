@@ -1,0 +1,19 @@
+partie {}
+joueur {}
+camp {}
+ressources {}
+combattre {}
+monstre {}
+batiments {}
+lieux {}
+actionchoix {}
+actiondecombat {}
+prendredesdegats {}
+effet {}
+objet {}
+	
+	
+	prendredesdegats -> prendredesdegats ()
+	ressources -> nombre
+	ressources -> type
+	objet -> nom
